@@ -522,7 +522,7 @@ func (c *TokenERC721Contract) TotalSupply(ctx kalpsdk.TransactionContextInterfac
 // param {String} symbol The symbol of the token
 
 func (c *TokenERC721Contract) Initialize(ctx kalpsdk.TransactionContextInterface, name string, symbol string) (bool, error) {
-	// Check minter authorization - this sample assumes Org1 is the issuer with privilege to set the name and symbol
+	
 	clientMSPID, err := ctx.GetClientIdentity().GetMSPID()
 	if err != nil {
 		return false, fmt.Errorf("failed to get clientMSPID: %v", err)
